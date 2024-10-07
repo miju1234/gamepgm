@@ -7,7 +7,6 @@ struct trump{
 };
 void make_card (trump m_card []);
 void display_card (trump m_card []);
-void shuffle_card (trump m_card []);
 
 int main (void){
 	trump card[52];
@@ -62,14 +61,3 @@ void display_card (trump m_card [])
 	}
 }
 
-void shuffle_card(trump m_card[]){
-	int i,rnd;
-	trump temp;
-	srand(time(NULL));
-	for(i=0;i<52;i++){
-		rnd = rand()%52;
-		temp = m_card[rnd];
-		m_card[rnd]= m_card[i];
-		m_card[i] = temp;
-	}
-}
